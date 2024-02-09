@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffd9e6; /* Pastel pink background color */
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .question {
+            font-size: 28px; /* Increased font size for the question */
+            margin-top: 10px; /* Adjusted margin */
+        }
+        .question b {
+            font-weight: bold;
+            font-family: 'Georgia', serif; /* Change font for the bold text */
+        }
+        .options {
+            margin-top: 10px; /* Adjusted margin */
+        }
+        #no-message {
+            display: none;
+            font-size: 22px; /* Increased font size for the no-message text */
+            color: red; /* Red font color */
+            font-family: 'cursive', sans-serif; /* Change font for the no-message text */
+            margin-top: 10px; /* Adjusted margin */
+        }
+        #no-message img {
+            width: 100px; /* Set the width of the image */
+            height: auto; /* Maintain the aspect ratio */
+            margin-top: 10px;
+        }
+        #love-message {
+            display: none;
+            font-size: 28px; /* Increased font size for the love-message text */
+            color: #33cc33; /* Green font color */
+            margin-top: 10px; /* Adjusted margin */
+        }
+        #love-message img {
+            width: 300px; /* Set the width of the image */
+            height: auto; /* Maintain the aspect ratio */
+            margin-top: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px; /* Adjusted margin */
+        }
+    </style>
+</head>
+<body>
+    <div class="question">
+        <p><b>Will You Be My Valentine? 💐💖</b></p>
+        <img src="file:///C:/Users/admin/Downloads/output-onlinegiftools.gif" alt="Valentine's Day GIF">
+    </div>
+    <div class="options">
+        <button onclick="showNo()">❌ NO</button>
+        <button onclick="showLove()">💘 YES</button>
+    </div>
+    <div id="no-message">
+        NOOOO! Why not? 🥺
+        <img id="no-image" src="path/to/your/no-image.jpg" alt="Image for NO Message">
+    </div>
+    <div id="love-message">YEYYYY! LETS HAVE A DATE AT 14 OR WHENEVER YOURE AVAILABLE AT FESTI,ATC OR MOA MY BUBI DRESS UP 
+OMKIE HAHANDA DEN BUBI MO HEHE YOU WILL BE MY DATEEE HAAA PWAMIS I WUV YOUUU SO MUCH! 💖</div>
+
+    <script>
+        const noMessages = [
+            "Pwetty please bubi? 🥺",
+            "Don't u love me anymoreeee? 😢",
+            "Still no? am i not lovable and cute?🥺",
+            "A valentine together will be wonderful, I promise! ❤️",
+            "Wuwu would love to be ur date! 😘"
+        ];
+
+        let noMessageIndex = 0;
+
+        function showNo() {
+            const noMessage = noMessages[noMessageIndex];
+            document.getElementById('no-message').innerText = noMessage;
+            document.getElementById('no-message').style.display = 'block';
+
+            // Clear previous images
+            clearImages('no-message');
+
+            // Check if the current message is "Pwetty please bubi?"
+            if (noMessage.includes("Pwetty please bubi?")) {
+                // Add an image to the NO message
+                const noImage = document.createElement('img');
+                noImage.src = 'file:///C:/Users/admin/Downloads/32970355e5c2c678af5a37f51226b054-removebg-preview.png';
+                noImage.alt = 'Image for NO Message';
+                noImage.style.width = '100px'; /* Set the width of the smaller image */
+                noImage.style.height = 'auto'; /* Maintain the aspect ratio */
+                document.getElementById('no-message').appendChild(noImage);
+            }
+
+            // Check if the current message is "Don't u love me anymoreeee? 😢"
+            if (noMessage.includes("Don't u love me anymoreeee? 😢")) {
+                // Add an image to the NO message
+                const noImage = document.createElement('img');
+                noImage.src = 'file:///C:/Users/admin/Downloads/sad_bear-removebg-preview.png';
+                noImage.alt = 'Image for NO Message';
+                noImage.style.width = '100px'; /* Set the width of the smaller image */
+                noImage.style.height = 'auto'; /* Maintain the aspect ratio */
+                document.getElementById('no-message').appendChild(noImage);
+            }
+
+            // Check if the current message is "A valentine together will be wonderful, I promise! ❤️"
+            if (noMessage.includes("A valentine together will be wonderful, I promise! ❤️")) {
+                // Add an image to the NO message
+                const noImage = document.createElement('img');
+                noImage.src = 'C:/Users/admin/Downloads/flower.png';
+                noImage.alt = 'Image for NO Message';
+                noImage.style.width = '100px'; /* Set the width of the smaller image */
+                noImage.style.height = 'auto'; /* Maintain the aspect ratio */
+                document.getElementById('no-message').appendChild(noImage);
+            }
+
+            // Check if the current message is "Wuwu would love to be ur date! 😘"
+            if (noMessage.includes("Wuwu would love to be ur date! 😘")) {
+                // Add an image to the NO message
+                const noImage = document.createElement('img');
+                noImage.src = 'file:///C:/Users/admin/Downloads/output-onlinegiftools%20(1).gif';
+                noImage.alt = 'Image for NO Message';
+                noImage.style.width = '100px'; /* Set the width of the smaller image */
+                noImage.style.height = 'auto'; /* Maintain the aspect ratio */
+                document.getElementById('no-message').appendChild(noImage);
+            }
+
+            // Check if the current message is "Still no? am i not lovable and cute?🥺"
+            if (noMessage.includes("Still no? am i not lovable and cute?🥺")) {
+                // Add an image to the NO message
+                const noImage = document.createElement('img');
+                noImage.src = 'file:///C:/Users/admin/Downloads/sad.jpg';
+                noImage.alt = 'Image for NO Message';
+                noImage.style.width = '100px'; /* Set the width of the smaller image */
+                noImage.style.height = 'auto'; /* Maintain the aspect ratio */
+                document.getElementById('no-message').appendChild(noImage);
+            }
+
+            // Update the index for the next click
+            noMessageIndex = (noMessageIndex + 1) % noMessages.length;
+        }
+
+        function showLove() {
+            document.getElementById('love-message').style.display = 'block';
+
+            // Clear previous images
+            clearImages('love-message');
+
+            // Add an image to the love message
+            const loveImage = document.createElement('img');
+            loveImage.src = 'file:///C:/Users/admin/Downloads/cute-bears-love.gif';
+            loveImage.alt = 'Image for Love Message';
+            document.getElementById('love-message').appendChild(loveImage);
+        }
+
+        function clearImages(elementId) {
+            // Clear images from the specified element
+            const element = document.getElementById(elementId);
+            const images = element.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].remove();
+            }
+        }
+    </script>
+</body>
+</html>
